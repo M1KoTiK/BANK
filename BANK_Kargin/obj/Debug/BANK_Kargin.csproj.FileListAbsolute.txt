@@ -13,3 +13,5 @@ C:\Users\mobil\source\repos\BANK_Kargin\BANK_Kargin\obj\Debug\BANK_Kargin.csproj
 C:\Users\mobil\source\repos\BANK_Kargin\BANK_Kargin\obj\Debug\BANK_Kargin.csproj.CoreCompileInputs.cache
 C:\Users\mobil\source\repos\BANK_Kargin\BANK_Kargin\obj\Debug\BANK_Kargin.exe
 C:\Users\mobil\source\repos\BANK_Kargin\BANK_Kargin\obj\Debug\BANK_Kargin.pdb
+C:\Users\mobil\source\repos\BANK_Kargin\BANK_Kargin\obj\Debug\View\DepopsitCalculators.g.cs
+C:\Users\mobil\source\repos\BANK_Kargin\BANK_Kargin\obj\Debug\View\DepopsitCalculators.baml

@@ -4,6 +4,9 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BANK_Kargin"
+        ResizeMode="CanResize" 
+        MinHeight="700"
+        MinWidth="1100"
         mc:Ignorable="d"
         Title="MainWindow" Height="720" Width="1280">
     <Grid>
@@ -12,22 +15,22 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        
+
         <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
+            <RowDefinition Height="69*"/>
+            <RowDefinition Height="69*"/>
+            <RowDefinition Height="69*"/>
+            <RowDefinition Height="69*"/>
+            <RowDefinition Height="69"/>
+            <RowDefinition Height="69*"/>
+            <RowDefinition Height="68*"/>
+            <RowDefinition Height="69*"/>
+            <RowDefinition Height="69*"/>
+            <RowDefinition Height="69*"/>
         </Grid.RowDefinitions>
-        <TextBlock Grid.Column="1" Grid.Row="0"  Grid.ColumnSpan="2" Grid.RowSpan="2" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,30,150,0" Text="Деньги в каждый карман" Foreground="#1e2f42" FontSize="40" />
-        <Image Source="res/images/ph1.png" Grid.Column="2" Grid.ColumnSpan="2" Grid.RowSpan="2" Grid.Row="0" Height="100" Width="100" Margin="0,10,10,0" HorizontalAlignment="Right" VerticalAlignment="Top"/>
-        
+        <TextBlock Grid.Column="1" Grid.Row="0"  Grid.ColumnSpan="2" Grid.RowSpan="2" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,25,110,0" Text="Деньги в каждый карман" Foreground="#1e2f42" FontSize="40" />
+        <Image Source="ph1.PNG" Grid.Column="2" Grid.ColumnSpan="2" Grid.RowSpan="2" Grid.Row="0" Height="70" Width="70" Margin="0,20,20,0" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+
         <Rectangle Grid.Column="0" Grid.Row="2" Grid.RowSpan="6" Fill="LightBlue" Margin="50,10,50,10" >
             <Rectangle.Effect>
                 <DropShadowEffect Color="#d5dff2" BlurRadius="150"/>
@@ -80,7 +83,7 @@
                 <Run  Text=" годовых" FontSize="40" />
             </TextBlock>
         </StackPanel>
-        <Button Grid.Column="1" Grid.Row="8" Grid.ColumnSpan="1" Grid.RowSpan="2" Margin="30,5,30,5" Height="60" Background="#2d72fc">
+        <Button Grid.Column="1" Grid.Row="8" Grid.ColumnSpan="1" Grid.RowSpan="2" Margin="30,5,30,5" Height="60" Foreground="#2d72fc" Background="#2d72fc">
             <TextBlock Text="Рассчитать" FontSize="25" Foreground="#ffffff"/>
         </Button>
     </Grid>
