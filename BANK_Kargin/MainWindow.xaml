@@ -28,8 +28,8 @@
             <RowDefinition Height="69*"/>
             <RowDefinition Height="69*"/>
         </Grid.RowDefinitions>
-        <TextBlock Grid.Column="1" Grid.Row="0"  Grid.ColumnSpan="2" Grid.RowSpan="2" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,25,110,0" Text="Деньги в каждый карман" Foreground="#1e2f42" FontSize="40" />
-        <Image Source="ph1.PNG" Grid.Column="2" Grid.ColumnSpan="2" Grid.RowSpan="2" Grid.Row="0" Height="70" Width="70" Margin="0,20,20,0" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+        <TextBlock Grid.Column="1" Grid.Row="0"  Grid.ColumnSpan="2" Grid.RowSpan="2" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,20,110,0" Text="Деньги в каждый карман" Foreground="#1e2f42" FontSize="40" />
+        <Image Source="ph1.PNG" Grid.Column="2" Grid.ColumnSpan="2" Grid.RowSpan="2" Grid.Row="0" Height="70" Width="70" Margin="0,15,20,0" HorizontalAlignment="Right" VerticalAlignment="Top"/>
 
         <Rectangle Grid.Column="0" Grid.Row="2" Grid.RowSpan="6" Fill="LightBlue" Margin="50,10,50,10" >
             <Rectangle.Effect>

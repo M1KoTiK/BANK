@@ -109,5 +109,11 @@
   <ItemGroup>
     <Resource Include="Model\res\images\ph1.PNG" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ph1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\ph1.PNG" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
