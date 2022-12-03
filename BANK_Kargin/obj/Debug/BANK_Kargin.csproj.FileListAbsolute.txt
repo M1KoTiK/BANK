@@ -1,0 +1,15 @@
+C:\Users\mobil\source\repos\BANK_Kargin\BANK_Kargin\bin\Debug\BANK_Kargin.exe.config
+C:\Users\mobil\source\repos\BANK_Kargin\BANK_Kargin\bin\Debug\BANK_Kargin.exe
+C:\Users\mobil\source\repos\BANK_Kargin\BANK_Kargin\bin\Debug\BANK_Kargin.pdb
+C:\Users\mobil\source\repos\BANK_Kargin\BANK_Kargin\obj\Debug\BANK_Kargin.csproj.AssemblyReference.cache
+C:\Users\mobil\source\repos\BANK_Kargin\BANK_Kargin\obj\Debug\MainWindow.g.cs
+C:\Users\mobil\source\repos\BANK_Kargin\BANK_Kargin\obj\Debug\App.g.cs
+C:\Users\mobil\source\repos\BANK_Kargin\BANK_Kargin\obj\Debug\BANK_Kargin_MarkupCompile.cache
+C:\Users\mobil\source\repos\BANK_Kargin\BANK_Kargin\obj\Debug\BANK_Kargin_MarkupCompile.lref
+C:\Users\mobil\source\repos\BANK_Kargin\BANK_Kargin\obj\Debug\MainWindow.baml
+C:\Users\mobil\source\repos\BANK_Kargin\BANK_Kargin\obj\Debug\BANK_Kargin.g.resources
+C:\Users\mobil\source\repos\BANK_Kargin\BANK_Kargin\obj\Debug\BANK_Kargin.Properties.Resources.resources
+C:\Users\mobil\source\repos\BANK_Kargin\BANK_Kargin\obj\Debug\BANK_Kargin.csproj.GenerateResource.cache
+C:\Users\mobil\source\repos\BANK_Kargin\BANK_Kargin\obj\Debug\BANK_Kargin.csproj.CoreCompileInputs.cache
+C:\Users\mobil\source\repos\BANK_Kargin\BANK_Kargin\obj\Debug\BANK_Kargin.exe
+C:\Users\mobil\source\repos\BANK_Kargin\BANK_Kargin\obj\Debug\BANK_Kargin.pdb
