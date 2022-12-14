@@ -8,6 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("view/ph1.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("model/modelbasebank.context.tt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("model/modelbasebank.tt")]
 
 
