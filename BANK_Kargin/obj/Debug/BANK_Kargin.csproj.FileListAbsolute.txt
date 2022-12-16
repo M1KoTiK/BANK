@@ -41,3 +41,5 @@ C:\Users\User\source\repos\BANK\BANK_Kargin\bin\Debug\EntityFramework.SqlServer.
 C:\Users\User\source\repos\BANK\BANK_Kargin\bin\Debug\ru\EntityFramework.resources.dll
 C:\Users\User\source\repos\BANK\BANK_Kargin\obj\Debug\BANK_Kargin.csproj.CopyComplete
 C:\Users\User\source\repos\BANK\BANK_Kargin\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\User\source\repos\BANK\BANK_Kargin\obj\Debug\View\ComparisonDeposit.g.cs
+C:\Users\User\source\repos\BANK\BANK_Kargin\obj\Debug\View\ComparisonDeposit.baml

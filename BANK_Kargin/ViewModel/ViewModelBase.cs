@@ -11,7 +11,7 @@ namespace BANK_Kargin.ViewModel
     public abstract class ViewModelBase : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler? PropertyChanged;
-        protected void NotifyPropertyChanged(string? propName = null)
+        protected virtual void NotifyPropertyChanged(string? propName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propName));
         }

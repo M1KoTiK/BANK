@@ -3,11 +3,15 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="clr-namespace:BANK_Kargin.ViewModel"
         xmlns:local="clr-namespace:BANK_Kargin.View"
         ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen"
         mc:Ignorable="d"
         Title="Калькулятор Вкладов" Height="720" Width="1280">
+    <Window.DataContext>
+        <vm:ViewModelDepositCalculators/>
+    </Window.DataContext>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -32,7 +36,7 @@
         
         <StackPanel Grid.Column="0" Grid.Row="1" Grid.RowSpan="9" Background="#ffffff" Margin="50">
             <TextBlock    VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="28" Text="Сумма" Margin="20,0,0,0"/>
-            <TextBox   Height="40" BorderBrush="#FF4775FF" BorderThickness="1.5" Margin="0,20,0,20" FontSize="26">
+            <TextBox x:Name="tb_summ"  Text="{Binding TbSumm, UpdateSourceTrigger=PropertyChanged}"  Height="40" BorderBrush="#2C7DE0" BorderThickness="1.5" Margin="0,20,0,20" FontSize="26"  >
                 <TextBox.Style>
                     <Style TargetType="TextBox" xmlns:sys="clr-namespace:System;assembly=mscorlib">
                         <Style.Resources>
@@ -46,12 +50,12 @@
                     </Style>
                 </TextBox.Style>
             </TextBox>
-                <Slider Height="50" TickPlacement="BottomRight" Minimum="0" Maximum="10000000" SelectionStart="0"/>
+            <Slider Height="50" TickPlacement="BottomRight" Minimum="0" IsSnapToTickEnabled="True"  TickFrequency="1" Maximum="10000000" Interval="1" SelectionStart="0" Value="{Binding ElementName= tb_summ, Mode=TwoWay, Path=Text }"/>
         </StackPanel>
 
         <StackPanel Grid.Column="0" Grid.Row="3" Grid.RowSpan="9" Background="#ffffff" Margin="50">
             <TextBlock    VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="28" Text="Срок" Margin="20,0,0,0"/>
-            <TextBox   Height="40" BorderBrush="#FF4775FF" BorderThickness="1.5" Margin="0,20,0,20" FontSize="26">
+            <TextBox x:Name="tb_days"  Text="{Binding TbPeriod, UpdateSourceTrigger=PropertyChanged}" Height="40" BorderBrush="#2C7DE0" BorderThickness="1.5" Margin="0,20,0,20" FontSize="26">
                 <TextBox.Style>
                     <Style TargetType="TextBox" xmlns:sys="clr-namespace:System;assembly=mscorlib">
                         <Style.Resources>
@@ -65,12 +69,12 @@
                     </Style>
                 </TextBox.Style>
             </TextBox>
-            <Slider Height="50" TickPlacement="BottomRight" Minimum="0" Maximum="10000000" SelectionStart="0"/>
+            <Slider Height="50" TickPlacement="BottomRight" Minimum="0" Maximum="1825" TickFrequency="1" IsSnapToTickEnabled="True" SelectionStart="0" Value="{Binding ElementName=tb_days, Mode=TwoWay, Path=Text }"/>
         </StackPanel>
 
         <StackPanel Grid.Column="0" Grid.Row="6" Grid.RowSpan="9" Background="#ffffff" Margin="50">
             <TextBlock    VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="28" Text="Ежемесячное пополнение" Margin="20,0,0,0"/>
-            <TextBox   Height="40" BorderBrush="#FF4775FF" BorderThickness="1.5" Margin="0,20,0,20" FontSize="26">
+            <TextBox x:Name="tb_evm"  Text="{Binding TbEVM, UpdateSourceTrigger=PropertyChanged}"  Height="40" BorderBrush="#2C7DE0" BorderThickness="1.5" Margin="0,20,0,20" FontSize="26">
                 <TextBox.Style>
                     <Style TargetType="TextBox" xmlns:sys="clr-namespace:System;assembly=mscorlib">
                         <Style.Resources>
@@ -84,7 +88,7 @@
                     </Style>
                 </TextBox.Style>
             </TextBox>
-            <Slider Height="50" TickPlacement="BottomRight" Minimum="0" Maximum="10000000" SelectionStart="0"/>
+            <Slider Height="50" TickPlacement="BottomRight" Minimum="0" Maximum="5000000" TickFrequency="1" IsSnapToTickEnabled="True" SelectionStart="0" Value="{Binding ElementName=tb_evm, Mode=TwoWay, Path=Text }"/>
         </StackPanel>
         
         <Rectangle Grid.Column="1" Grid.Row="1" Grid.RowSpan="9" Fill="#606060" Margin="125,50,125,50" >
@@ -93,8 +97,30 @@
             </Rectangle.Effect>
         </Rectangle>
         <StackPanel Grid.Column="1" Grid.Row="1" Grid.RowSpan="9" Background="#ffffff" Margin="125,50,125,50" >
-            
+            <StackPanel>
+                <TextBlock Text="Стабильный" HorizontalAlignment="Center" Margin="0,20,0,0" FontSize="26"/>
+                <TextBlock Text="Доход"  Margin="30,0,0,0" FontSize="18"/>
+                <TextBlock Text="{Binding StableIncom}"  Margin="30,10,0,0" FontSize="24"  />
+                <Line X1="30" Y1="5" X2="300" Y2="5" Stroke="#2C7DE0"  />
+            </StackPanel>
+            <StackPanel>
+                <TextBlock Text="Оптимальный" HorizontalAlignment="Center" Margin="0,20,0,0" FontSize="26"/>
+                <TextBlock Text="Доход"  Margin="30,0,0,0" FontSize="18"/>
+                <TextBlock Text="{Binding OptimalIncom}"  Margin="30,10,0,0" FontSize="24"  />
+                <Line X1="30" Y1="5" X2="300" Y2="5" Stroke="#2C7DE0"  />
+            </StackPanel>
+            <StackPanel>
+                <TextBlock Text="Стандартный" HorizontalAlignment="Center" Margin="0,20,0,0" FontSize="26"/>
+                <TextBlock Text="Доход"  Margin="30,0,0,0" FontSize="18"/>
+                <TextBlock Text="{Binding StandartIncom}"  Margin="30,10,0,0" FontSize="24"  />
+                <Line X1="30" Y1="5" X2="300" Y2="5" Stroke="#2C7DE0"  />
+            </StackPanel>
+            <Button Margin="40" Background="#2C7DE0" Command="{Binding OnClickСomparison}">
+                <TextBlock Text="Сравнить параметры" FontSize="24" Foreground="White" />
+            </Button>
         </StackPanel>
+        
+        
 
     </Grid>
 </Window>
