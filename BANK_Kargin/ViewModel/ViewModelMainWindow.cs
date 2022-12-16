@@ -10,15 +10,13 @@ namespace BANK_Kargin.ViewModel
 {
     public class ViewModelMainWindow : ViewModelBase
     {
-        public ActionCommand Task1Command { get; set; }
-        public void ViewModelMain()
+        public ActionCommand OnClickCalcluteBtn { get; set; }
+        public ViewModelMainWindow()
         {
-            Task1Command = new ActionCommand(() => ChangeWindow() );
-          
-        }
-        public void ChangeWindow()
-        {
+            OnClickCalcluteBtn = new ActionCommand(()=> new DepopsitCalculators().ShowDialog());
 
         }
+
+
     }
 }

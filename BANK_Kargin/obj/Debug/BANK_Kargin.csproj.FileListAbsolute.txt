@@ -33,3 +33,11 @@ C:\Users\User\source\repos\BANK\BANK_Kargin\obj\Debug\BANK_Kargin.csproj.Generat
 C:\Users\User\source\repos\BANK\BANK_Kargin\obj\Debug\BANK_Kargin.csproj.CoreCompileInputs.cache
 C:\Users\User\source\repos\BANK\BANK_Kargin\obj\Debug\BANK_Kargin.exe
 C:\Users\User\source\repos\BANK\BANK_Kargin\obj\Debug\BANK_Kargin.pdb
+C:\Users\User\source\repos\BANK\BANK_Kargin\obj\Debug\BANK_Kargin_Content.g.cs
+C:\Users\User\source\repos\BANK\BANK_Kargin\bin\Debug\EntityFramework.dll
+C:\Users\User\source\repos\BANK\BANK_Kargin\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\User\source\repos\BANK\BANK_Kargin\bin\Debug\EntityFramework.xml
+C:\Users\User\source\repos\BANK\BANK_Kargin\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\User\source\repos\BANK\BANK_Kargin\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\User\source\repos\BANK\BANK_Kargin\obj\Debug\BANK_Kargin.csproj.CopyComplete
+C:\Users\User\source\repos\BANK\BANK_Kargin\obj\Debug\GeneratedInternalTypeHelper.g.cs

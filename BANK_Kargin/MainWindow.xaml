@@ -4,12 +4,16 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BANK_Kargin"
-        xmlns:vm="clr-namespace:KarginPR1Modules.ViewModel"
+        xmlns:vm="clr-namespace:BANK_Kargin.ViewModel"
         ResizeMode="CanResize" 
         MinHeight="700"
         MinWidth="1100"
         mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
         Title="MainWindow" Height="720" Width="1280">
+    <Window.DataContext>
+        <vm:ViewModelMainWindow/>
+    </Window.DataContext>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -84,7 +88,7 @@
                 <Run  Text=" годовых" FontSize="40" />
             </TextBlock>
         </StackPanel>
-        <Button Grid.Column="1" Grid.Row="8" Grid.ColumnSpan="1" Grid.RowSpan="2" Margin="30,5,30,5" Height="60" Foreground="#2d72fc" Background="#2d72fc">
+        <Button Grid.Column="1" Grid.Row="8" Grid.ColumnSpan="1" Grid.RowSpan="2" Margin="30,5,30,5" Height="60" Foreground="#2d72fc" Background="#2d72fc"  Command="{Binding OnClickCalcluteBtn }">
             <TextBlock Text="Рассчитать" FontSize="25" Foreground="#ffffff"/>
         </Button>
     </Grid>

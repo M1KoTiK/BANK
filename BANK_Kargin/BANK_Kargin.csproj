@@ -71,15 +71,38 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Model\ModelBaseBank.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ModelBaseBank.Context.tt</DependentUpon>
+    <Compile Include="Model\BankAccount.cs">
+      <DependentUpon>ModelDataBaseBank.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\ModelBaseBank.Designer.cs">
+    <Compile Include="Model\Contract.cs">
+      <DependentUpon>ModelDataBaseBank.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\History.cs">
+      <DependentUpon>ModelDataBaseBank.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ModelDataBaseBank.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ModelBaseBank.edmx</DependentUpon>
+      <DependentUpon>ModelDataBaseBank.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ModelDataBaseBank.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelDataBaseBank.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ModelDataBaseBank.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelDataBaseBank.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\sysdiagrams.cs">
+      <DependentUpon>ModelDataBaseBank.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Type.cs">
+      <DependentUpon>ModelDataBaseBank.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\User.cs">
+      <DependentUpon>ModelDataBaseBank.tt</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\ActionCommand.cs" />
     <Compile Include="ViewModel\ViewModelMainWindow.cs" />
@@ -122,12 +145,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="Model\ModelBaseBank.edmx">
+    <EntityDeploy Include="Model\ModelDataBaseBank.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ModelBaseBank.Designer.cs</LastGenOutput>
+      <LastGenOutput>ModelDataBaseBank.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Model\ModelBaseBank.edmx.diagram">
-      <DependentUpon>ModelBaseBank.edmx</DependentUpon>
+    <None Include="Model\ModelDataBaseBank.edmx.diagram">
+      <DependentUpon>ModelDataBaseBank.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -138,7 +161,18 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Model\ModelDataBaseBank.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelDataBaseBank.edmx</DependentUpon>
+      <LastGenOutput>ModelDataBaseBank.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\ModelDataBaseBank.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelDataBaseBank.edmx</DependentUpon>
+      <LastGenOutput>ModelDataBaseBank.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="View\res\images\ph1.PNG" />
   </ItemGroup>
@@ -147,12 +181,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="View\ph1.PNG" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Model\ModelBaseBank.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>ModelBaseBank.Context.cs</LastGenOutput>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
