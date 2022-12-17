@@ -177,11 +177,11 @@ namespace BANK_Kargin.ViewModel
             if (TbSumm >= 0 && tbPeriod >= 0 && tbEVM >= 0)
             {
                 double stableTotal = (TbSumm * Math.Pow(1.08, Convert.ToDouble(TbPeriod) / 365)) - TbSumm;
-                double stableSumm = (TbSumm * Math.Pow(1.08, Convert.ToDouble(TbPeriod) / 365)) ;
+                double stableSumm = TbSumm+stableTotal ;
                 double optimalTotal = (TbSumm * Math.Pow(1 + (0.05 / 12), tbPeriod / 30) + TbEVM * Math.Pow(1 + (0.05 / 12), tbPeriod / 30)) - TbSumm;
-                double optimalSumm = (TbSumm * Math.Pow(1 + (0.05 / 12), tbPeriod / 30) + TbEVM * Math.Pow(1 + (0.05 / 12), tbPeriod / 30)) ;
+                double optimalSumm = TbSumm + optimalTotal;
                 double standartTotal = (TbSumm * Math.Pow(1 + (0.06 / 12), tbPeriod / 30) + TbEVM * Math.Pow(1 + (0.06 / 12), tbPeriod / 30)) - TbSumm;
-                double standartSumm = (TbSumm * Math.Pow(1 + (0.06 / 12), tbPeriod / 30) + TbEVM * Math.Pow(1 + (0.06 / 12), tbPeriod / 30)) ;
+                double standartSumm = TbSumm + standartTotal;
                 StableIncom = Convert.ToString(Math.Round(stableTotal, 0)) + " Руб.";
                 StableSumm = Convert.ToString(Math.Round(stableSumm, 0)) + " Руб.";
                 OptimalIncom = Convert.ToString(Math.Round(optimalTotal, 0)) + " Руб.";

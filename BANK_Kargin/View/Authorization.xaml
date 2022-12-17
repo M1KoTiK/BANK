@@ -4,12 +4,96 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BANK_Kargin.View"
-        xmlns:vm="clr-namespace:BANK_Kargin.ViewModel"
+       xmlns:vm="clr-namespace:BANK_Kargin.ViewModel"
         ResizeMode="CanResize" 
         MinHeight="700"
         MinWidth="1100"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         Title="MainWindow" Height="720" Width="1280">
-    
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="69*"/>
+            <RowDefinition Height="69*"/>
+            <RowDefinition Height="69*"/>
+            <RowDefinition Height="69*"/>
+            <RowDefinition Height="69"/>
+            <RowDefinition Height="69*"/>
+            <RowDefinition Height="68*"/>
+            <RowDefinition Height="69*"/>
+            <RowDefinition Height="69*"/>
+            <RowDefinition Height="69*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Column="1" Grid.Row="0"  Grid.ColumnSpan="2" Grid.RowSpan="2" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,20,110,0" Text="Деньги в каждый карман" Foreground="#1e2f42" FontSize="40" />
+        <Image Source="ph1.PNG" Grid.Column="2" Grid.ColumnSpan="2" Grid.RowSpan="2" Grid.Row="0" Height="70" Width="70" Margin="0,15,20,0" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+        <Rectangle Grid.Column="0"  Grid.ColumnSpan="3" Grid.Row="2" Grid.RowSpan="7" Fill="LightBlue" Margin="350,10,350,0" >
+            <Rectangle.Effect>
+                <DropShadowEffect Color="Black" BlurRadius="150"/>
+            </Rectangle.Effect>
+        </Rectangle>
+        <StackPanel Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" Grid.RowSpan="7" Background="White" Margin="350,10,350,0">
+            <TextBlock Text="Авторизация" FontSize="28" HorizontalAlignment="Center" Margin="0,20,0,0"/>
+            <TextBlock Text="Логин" FontSize="28" HorizontalAlignment="Left" Margin="20,20,0,0"/>
+            <TextBox Height="50" Margin="20,0,20,0" FontSize="26" BorderBrush="Transparent">
+                <TextBox.Style>
+                    <Style TargetType="TextBox" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+                        <Style.Resources>
+                            <VisualBrush x:Key="CueBannerBrush" AlignmentX="Left" AlignmentY="Center" Stretch="None">
+                                <VisualBrush.Visual>
+                                    <Label Content="Введите логин" Foreground="LightGray" FontSize="22" />
+                                </VisualBrush.Visual>
+                            </VisualBrush>
+                        </Style.Resources>
+                        <Style.Triggers>
+                            <Trigger Property="Text" Value="{x:Static sys:String.Empty}">
+                                <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
+                            </Trigger>
+                            <Trigger Property="Text" Value="{x:Null}">
+                                <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
+                            </Trigger>
+                            <Trigger Property="IsKeyboardFocused" Value="True">
+                                <Setter Property="Background" Value="White" />
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </TextBox.Style>
+            </TextBox>
+            <Line X1="30" Y1="5" X2="550" Y2="5" Stroke="#2C7DE0"  />
+            <TextBlock Text="Пароль" FontSize="28" HorizontalAlignment="Left" Margin="20,20,0,0"/>
+            <TextBox Height="50" Margin="20,0,20,0" FontSize="26" BorderBrush="Transparent">
+                <TextBox.Style>
+                    <Style TargetType="TextBox" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+                        <Style.Resources>
+                            <VisualBrush x:Key="CueBannerBrush" AlignmentX="Left" AlignmentY="Center" Stretch="None">
+                                <VisualBrush.Visual>
+                                    <Label Content="Введите логин" Foreground="LightGray" FontSize="22" />
+                                </VisualBrush.Visual>
+                            </VisualBrush>
+                        </Style.Resources>
+                        <Style.Triggers>
+                            <Trigger Property="Text" Value="{x:Static sys:String.Empty}">
+                                <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
+                            </Trigger>
+                            <Trigger Property="Text" Value="{x:Null}">
+                                <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
+                            </Trigger>
+                            <Trigger Property="IsKeyboardFocused" Value="True">
+                                <Setter Property="Background" Value="White" />
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </TextBox.Style>
+            </TextBox>
+            <Line X1="30" Y1="5" X2="550" Y2="5" Stroke="#2C7DE0"  />
+            <Button Background="#2C7DE0" Margin="25,100,25,0">
+                <TextBlock Text="Вход" FontSize="26" Foreground="White"/>
+            </Button>
+        </StackPanel>
+    </Grid>
 </Window>
