@@ -43,3 +43,5 @@ C:\Users\User\source\repos\BANK\BANK_Kargin\obj\Debug\BANK_Kargin.csproj.CopyCom
 C:\Users\User\source\repos\BANK\BANK_Kargin\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\User\source\repos\BANK\BANK_Kargin\obj\Debug\View\ComparisonDeposit.g.cs
 C:\Users\User\source\repos\BANK\BANK_Kargin\obj\Debug\View\ComparisonDeposit.baml
+C:\Users\User\source\repos\BANK\BANK_Kargin\obj\Debug\View\Authorization.g.cs
+C:\Users\User\source\repos\BANK\BANK_Kargin\obj\Debug\View\Authorization.baml

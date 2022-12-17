@@ -10,17 +10,16 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using BANK_Kargin.ViewModel;
 using System.Windows.Shapes;
 
 namespace BANK_Kargin.View
 {
     /// <summary>
-    /// Логика взаимодействия для ComparisonDeposit.xaml
+    /// Логика взаимодействия для Authorization.xaml
     /// </summary>
-    public partial class ComparisonDeposit : Window
+    public partial class Authorization : Window
     {
-        public ComparisonDeposit()
+        public Authorization()
         {
             InitializeComponent();
         }

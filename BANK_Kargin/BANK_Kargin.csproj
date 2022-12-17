@@ -105,10 +105,12 @@
       <DependentUpon>ModelDataBaseBank.tt</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\ActionCommand.cs" />
-    <Compile Include="ViewModel\ViewModelComparisonDeposit.cs" />
     <Compile Include="ViewModel\ViewModelDepositCalculators.cs" />
     <Compile Include="ViewModel\ViewModelMainWindow.cs" />
     <Compile Include="ViewModel\ViewModelBase.cs" />
+    <Compile Include="View\Authorization.xaml.cs">
+      <DependentUpon>Authorization.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\ComparisonDeposit.xaml.cs">
       <DependentUpon>ComparisonDeposit.xaml</DependentUpon>
     </Compile>
@@ -127,6 +129,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="View\Authorization.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\ComparisonDeposit.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
