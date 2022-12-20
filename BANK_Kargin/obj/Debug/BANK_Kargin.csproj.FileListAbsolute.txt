@@ -45,3 +45,5 @@ C:\Users\User\source\repos\BANK\BANK_Kargin\obj\Debug\View\ComparisonDeposit.g.c
 C:\Users\User\source\repos\BANK\BANK_Kargin\obj\Debug\View\ComparisonDeposit.baml
 C:\Users\User\source\repos\BANK\BANK_Kargin\obj\Debug\View\Authorization.g.cs
 C:\Users\User\source\repos\BANK\BANK_Kargin\obj\Debug\View\Authorization.baml
+C:\Users\User\source\repos\BANK\BANK_Kargin\bin\Debug\Resources\template.docx
+C:\Users\User\source\repos\BANK\BANK_Kargin\bin\Debug\ru\EntityFramework.SqlServer.resources.dll

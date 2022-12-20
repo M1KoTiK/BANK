@@ -2,6 +2,7 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:vm="clr-namespace:BANK_Kargin.ViewModel"
         xmlns:local="clr-namespace:BANK_Kargin.View"
@@ -12,6 +13,27 @@
     <Window.DataContext>
         <vm:ViewModelDepositCalculators/>
     </Window.DataContext>
+    <Window.Resources>
+        <VisualBrush x:Key="BrushHintPrice" AlignmentX="Right" AlignmentY="Center" Stretch="None">
+            <VisualBrush.Visual>
+                <Label Content="Руб." Foreground="Black" FontSize="26" Margin="0,20,0,0"/>
+            </VisualBrush.Visual>
+        </VisualBrush>
+
+        <VisualBrush x:Key="BrushHintDays" AlignmentX="Right" AlignmentY="Center" Stretch="None">
+            <VisualBrush.Visual>
+                <Label Content="Дней" Foreground="Black" FontSize="26" Margin="0,20,0,0"/>
+            </VisualBrush.Visual>
+        </VisualBrush>
+
+        <Style TargetType="TextBox" x:Key="tbHintPrice">
+            <Setter Property="Background" Value="{StaticResource BrushHintPrice}" />
+        </Style>
+
+        <Style TargetType="TextBox" x:Key="tbHintDays">
+            <Setter Property="Background" Value="{StaticResource BrushHintDays}" />
+        </Style>
+    </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -36,58 +58,20 @@
         
         <StackPanel Grid.Column="0" Grid.Row="1" Grid.RowSpan="9" Background="#ffffff" Margin="50">
             <TextBlock    VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="28" Text="Сумма" Margin="20,0,0,0"/>
-            <TextBox x:Name="tb_summ"  Text="{Binding TbSumm, UpdateSourceTrigger=PropertyChanged}"  Height="40" BorderBrush="#2C7DE0" BorderThickness="1.5" Margin="0,20,0,20" FontSize="26"  >
-                <TextBox.Style>
-                    <Style TargetType="TextBox" xmlns:sys="clr-namespace:System;assembly=mscorlib">
-                        <Style.Resources>
-                            <VisualBrush x:Key="CueBannerBrush" AlignmentX="Right" AlignmentY="Center" Stretch="None">
-                                <VisualBrush.Visual>
-                                    <Label Content="Руб." Foreground="Black" FontSize="26" Margin="0,20,0,0"/>
-                                </VisualBrush.Visual>
-                            </VisualBrush>
-                        </Style.Resources>
-                        <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
-                    </Style>
-                </TextBox.Style>
-            </TextBox>
+            <TextBox x:Name="tb_summ"  Text="{Binding TbSumm, UpdateSourceTrigger=PropertyChanged}"  Height="40" BorderBrush="#2C7DE0" BorderThickness="1.5" Margin="0,20,0,20" FontSize="26" Style="{StaticResource tbHintPrice}"/>
             <Slider Height="50" TickPlacement="BottomRight" Minimum="0" IsSnapToTickEnabled="True"  TickFrequency="1" Maximum="10000000" Interval="1" SelectionStart="0" Value="{Binding ElementName= tb_summ, Mode=TwoWay, Path=Text }"/>
         </StackPanel>
 
         <StackPanel Grid.Column="0" Grid.Row="3" Grid.RowSpan="9" Background="#ffffff" Margin="50">
             <TextBlock    VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="28" Text="Срок" Margin="20,0,0,0"/>
-            <TextBox x:Name="tb_days"  Text="{Binding TbPeriod, UpdateSourceTrigger=PropertyChanged}" Height="40" BorderBrush="#2C7DE0" BorderThickness="1.5" Margin="0,20,0,20" FontSize="26">
-                <TextBox.Style>
-                    <Style TargetType="TextBox" xmlns:sys="clr-namespace:System;assembly=mscorlib">
-                        <Style.Resources>
-                            <VisualBrush x:Key="CueBannerBrush" AlignmentX="Right" AlignmentY="Center" Stretch="None">
-                                <VisualBrush.Visual>
-                                    <Label Content="Дней" Foreground="Black" FontSize="26" Margin="0,20,0,0"/>
-                                </VisualBrush.Visual>
-                            </VisualBrush>
-                        </Style.Resources>
-                        <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
-                    </Style>
-                </TextBox.Style>
-            </TextBox>
+            <TextBox x:Name="tb_days"  Text="{Binding TbPeriod, UpdateSourceTrigger=PropertyChanged}" Height="40" BorderBrush="#2C7DE0" BorderThickness="1.5" Margin="0,20,0,20" FontSize="26" Style="{StaticResource tbHintDays}"/>
+
             <Slider Height="50" TickPlacement="BottomRight" Minimum="0" Maximum="1825" TickFrequency="1" IsSnapToTickEnabled="True" SelectionStart="0" Value="{Binding ElementName=tb_days, Mode=TwoWay, Path=Text }"/>
         </StackPanel>
 
         <StackPanel Grid.Column="0" Grid.Row="6" Grid.RowSpan="9" Background="#ffffff" Margin="50">
             <TextBlock    VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="28" Text="Ежемесячное пополнение" Margin="20,0,0,0"/>
-            <TextBox x:Name="tb_evm"  Text="{Binding TbEVM, UpdateSourceTrigger=PropertyChanged}"  Height="40" BorderBrush="#2C7DE0" BorderThickness="1.5" Margin="0,20,0,20" FontSize="26">
-                <TextBox.Style>
-                    <Style TargetType="TextBox" xmlns:sys="clr-namespace:System;assembly=mscorlib">
-                        <Style.Resources>
-                            <VisualBrush x:Key="CueBannerBrush" AlignmentX="Right" AlignmentY="Center" Stretch="None">
-                                <VisualBrush.Visual>
-                                    <Label Content="Руб." Foreground="Black" FontSize="26" Margin="0,20,0,0"/>
-                                </VisualBrush.Visual>
-                            </VisualBrush>
-                        </Style.Resources>
-                        <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
-                    </Style>
-                </TextBox.Style>
-            </TextBox>
+            <TextBox x:Name="tb_evm"  Text="{Binding TbEVM, UpdateSourceTrigger=PropertyChanged}"  Height="40" BorderBrush="#2C7DE0" BorderThickness="1.5" Margin="0,20,0,20" FontSize="26" Style="{StaticResource tbHintPrice}"/>
             <Slider Height="50" TickPlacement="BottomRight" Minimum="0" Maximum="5000000" TickFrequency="1" IsSnapToTickEnabled="True" SelectionStart="0" Value="{Binding ElementName=tb_evm, Mode=TwoWay, Path=Text }"/>
         </StackPanel>
         
@@ -100,19 +84,19 @@
             <StackPanel>
                 <TextBlock Text="Стабильный" HorizontalAlignment="Center" Margin="0,20,0,0" FontSize="26"/>
                 <TextBlock Text="Доход"  Margin="30,0,0,0" FontSize="18"/>
-                <TextBlock Text="{Binding StableIncom}"  Margin="30,10,0,0" FontSize="24"  />
+                <TextBlock Text="{Binding StableIncome}"  Margin="30,10,0,0" FontSize="24"  />
                 <Line X1="30" Y1="5" X2="300" Y2="5" Stroke="#2C7DE0"  />
             </StackPanel>
             <StackPanel>
                 <TextBlock Text="Оптимальный" HorizontalAlignment="Center" Margin="0,20,0,0" FontSize="26"/>
                 <TextBlock Text="Доход"  Margin="30,0,0,0" FontSize="18"/>
-                <TextBlock Text="{Binding OptimalIncom}"  Margin="30,10,0,0" FontSize="24"  />
+                <TextBlock Text="{Binding OptimalIncome}"  Margin="30,10,0,0" FontSize="24"  />
                 <Line X1="30" Y1="5" X2="300" Y2="5" Stroke="#2C7DE0"  />
             </StackPanel>
             <StackPanel>
                 <TextBlock Text="Стандартный" HorizontalAlignment="Center" Margin="0,20,0,0" FontSize="26"/>
                 <TextBlock Text="Доход"  Margin="30,0,0,0" FontSize="18"/>
-                <TextBlock Text="{Binding StandartIncom}"  Margin="30,10,0,0" FontSize="24"  />
+                <TextBlock Text="{Binding StandartIncome}"  Margin="30,10,0,0" FontSize="24"  />
                 <Line X1="30" Y1="5" X2="300" Y2="5" Stroke="#2C7DE0"  />
             </StackPanel>
             <Button Margin="40" Background="#2C7DE0" Command="{Binding OnClickСomparison}">

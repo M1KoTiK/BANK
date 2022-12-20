@@ -11,6 +11,9 @@
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         Title="MainWindow" Height="720" Width="1280">
+    <Window.DataContext>
+        <vm:ViewModelDepositCalculators/>
+    </Window.DataContext>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -40,7 +43,7 @@
         <StackPanel Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" Grid.RowSpan="7" Background="White" Margin="350,10,350,0">
             <TextBlock Text="Авторизация" FontSize="28" HorizontalAlignment="Center" Margin="0,20,0,0"/>
             <TextBlock Text="Логин" FontSize="28" HorizontalAlignment="Left" Margin="20,20,0,0"/>
-            <TextBox Height="50" Margin="20,0,20,0" FontSize="26" BorderBrush="Transparent">
+            <TextBox Text="{Binding Login}" Height="50" Margin="20,0,20,0" FontSize="26" BorderBrush="Transparent">
                 <TextBox.Style>
                     <Style TargetType="TextBox" xmlns:sys="clr-namespace:System;assembly=mscorlib">
                         <Style.Resources>
@@ -66,7 +69,7 @@
             </TextBox>
             <Line X1="30" Y1="5" X2="550" Y2="5" Stroke="#2C7DE0"  />
             <TextBlock Text="Пароль" FontSize="28" HorizontalAlignment="Left" Margin="20,20,0,0"/>
-            <TextBox Height="50" Margin="20,0,20,0" FontSize="26" BorderBrush="Transparent">
+            <TextBox Text="{Binding Password}" Height="50" Margin="20,0,20,0" FontSize="26" BorderBrush="Transparent">
                 <TextBox.Style>
                     <Style TargetType="TextBox" xmlns:sys="clr-namespace:System;assembly=mscorlib">
                         <Style.Resources>
@@ -91,7 +94,7 @@
                 </TextBox.Style>
             </TextBox>
             <Line X1="30" Y1="5" X2="550" Y2="5" Stroke="#2C7DE0"  />
-            <Button Background="#2C7DE0" Margin="25,100,25,0">
+            <Button Background="#2C7DE0" Margin="25,100,25,0" Command="{Binding OnClikcLog}">
                 <TextBlock Text="Вход" FontSize="26" Foreground="White"/>
             </Button>
         </StackPanel>

@@ -48,7 +48,7 @@
                 <TextBlock Text="{Binding StableIncom, UpdateSourceTrigger=PropertyChanged}" Width="200" FontSize="26"  Margin="60,0,0,0"/>
                 <TextBlock Text="{Binding StableSumm, UpdateSourceTrigger=PropertyChanged }" Width="200" FontSize="26"  Margin="65,0,0,0"/>
                 <TextBlock Text="{Binding StableBet, UpdateSourceTrigger=PropertyChanged}" Width="200" FontSize="26"  Margin="100,0,0,0"/>
-                <Button Background="#2C7DE0" Width="150" Command="{Binding OnClikcBtns}"> 
+                <Button Background="#2C7DE0" Width="150" Command="{Binding OnClikcCalcStable}"> 
                     <TextBlock Text="Открыть вклад" Foreground="White" FontSize="15" />
                 </Button>
             </StackPanel>
@@ -58,7 +58,7 @@
                 <TextBlock Text="{Binding OptimalIncom, UpdateSourceTrigger=PropertyChanged}" Width="200" FontSize="26"  Margin="35,0,0,0"/>
                 <TextBlock Text="{Binding OptimalSumm, UpdateSourceTrigger=PropertyChanged}" Width="200" FontSize="26"  Margin="65,0,0,0"/>
                 <TextBlock Text="{Binding OptimalBet, UpdateSourceTrigger=PropertyChanged}" Width="200" FontSize="26"  Margin="105,0,0,0"/>
-                <Button Background="#2C7DE0" Width="150" Command="{Binding OnClikcBtns}">
+                <Button Background="#2C7DE0" Width="150" Command="{Binding OnClikcCalcOptimal}">
                     <TextBlock Text="Открыть вклад" Foreground="White" FontSize="15" />
                 </Button>
             </StackPanel>
@@ -68,13 +68,13 @@
                 <TextBlock Text="{Binding StandartIncom, UpdateSourceTrigger=PropertyChanged}" Width="200" FontSize="26"  Margin="45,0,0,0"/>
                 <TextBlock Text="{Binding StandartSumm, UpdateSourceTrigger=PropertyChanged}" Width="200" FontSize="26"  Margin="65,0,0,0"/>
                 <TextBlock Text="{Binding StandartBet, UpdateSourceTrigger=PropertyChanged}" Width="200" FontSize="26"  Margin="105,0,0,0"/>
-                <Button Background="#2C7DE0" Width="150" Command="{Binding OnClikcBtns}">
+                <Button Background="#2C7DE0" Width="150" Command="{Binding OnClikcCalcStandart}">
                     <TextBlock Text="Открыть вклад" Foreground="White" FontSize="15" />
                 </Button>
             </StackPanel>
             <Line X1="0" Y1="5" X2="1135" Y2="5" Stroke="#2C7DE0" StrokeThickness="2.2"  Margin="0,40,0,0"/>
         </StackPanel>
-        <Button Grid.Column="0" Grid.Row="8" Width="500"  Grid.ColumnSpan="3" Grid.RowSpan="1" Height="50" Margin="0,0,0,0" Background="#2C7DE0" Command="{Binding OnClikcBtns}" >
+        <Button Grid.Column="0" Grid.Row="8" Width="500"  Grid.ColumnSpan="3" Grid.RowSpan="1" Height="50" Margin="0,0,0,0" Background="#2C7DE0" Command="{Binding OnClikcCalcStable}" >
             <TextBlock Text="Сформировать выписку" Foreground="White" FontSize="26"/>
         </Button>
 
